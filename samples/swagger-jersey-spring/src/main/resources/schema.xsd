@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/schema"
+	xmlns:tns="http://www.example.org/schema" elementFormDefault="qualified">
+
+	<element name="User" type="tns:UserType"></element>
+
+	<complexType name="UserType">
+		<sequence>
+			<element name="emailId" type="string"></element>
+			<element name="firstName" type="string"></element>
+			<element name="lastName" type="string"></element>
+		</sequence>
+	</complexType>
+</schema>
