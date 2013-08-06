@@ -24,5 +24,6 @@
   </dependencies>
   <modules>
     <module>regex</module>
+    <module>mysql-jpa-spring-loadbalance</module>
   </modules>
 </project>
