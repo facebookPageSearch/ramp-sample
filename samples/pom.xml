@@ -25,5 +25,6 @@
   <modules>
     <module>regex</module>
     <module>mysql-jpa-spring-loadbalance</module>
+    <module>swagger-jersey-spring</module>
   </modules>
 </project>

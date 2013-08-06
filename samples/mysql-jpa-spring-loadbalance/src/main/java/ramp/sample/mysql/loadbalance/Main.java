@@ -39,6 +39,7 @@ public class Main {
 		baseSpring.readMethod2(user.getEmailId());
 		baseSpring.writeMethod2(user.getEmailId());
 		baseSpring.readMethod2(user.getEmailId());
+		baseSpring.readMethod1();
 	}
 
 }
