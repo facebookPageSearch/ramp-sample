@@ -26,5 +26,8 @@
     <module>regex</module>
     <module>mysql-jpa-spring-loadbalance</module>
     <module>swagger-jersey-spring</module>
+    <module>jira-rest-java-client</module>
+    <module>jira-webhook</module>
+    <module>log4jmdc</module>
   </modules>
 </project>
