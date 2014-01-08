@@ -29,5 +29,6 @@
     <module>jira-rest-java-client</module>
     <module>jira-webhook</module>
     <module>log4jmdc</module>
+    <module>spring-jdbc-template</module>
   </modules>
 </project>
