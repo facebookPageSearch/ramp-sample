@@ -30,5 +30,6 @@
     <module>jira-webhook</module>
     <module>log4jmdc</module>
     <module>spring-jdbc-template</module>
+    <module>spring-jersey-test</module>
   </modules>
 </project>
