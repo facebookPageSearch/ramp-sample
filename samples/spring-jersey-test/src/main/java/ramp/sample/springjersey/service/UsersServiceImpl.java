@@ -16,7 +16,7 @@ import ramp.sample.springjersey.types.Users;
  * @since Mar 24, 2014
  */
 @Component
-public class UsersServiceImpl {
+public class UsersServiceImpl implements UsersService{
 	public Users getAll() {
 		return getUsers();
 	}
