@@ -31,5 +31,6 @@
     <module>log4jmdc</module>
     <module>spring-jdbc-template</module>
     <module>spring-jersey-test</module>
+    <module>hibernate-jpa-spring</module>
   </modules>
 </project>
