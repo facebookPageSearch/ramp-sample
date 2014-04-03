@@ -48,12 +48,6 @@ public class BaseDAOImpl<T, ID extends Serializable> implements BaseDAO<T, ID> {
 	//https://community.jboss.org/wiki/ConfigureEhcacheasaSecondLevelCache
 	@PersistenceContext(name = "hibernate-jpa-spring", 
 			unitName = "hibernate-jpa-spring"
-//			,properties = { 
-//				@PersistenceProperty(name = "hibernate.cache.use_second_level_cache", value = "true"),
-//				@PersistenceProperty(name = "hibernate.cache.region.factory_class", value = "net.sf.ehcache.hibernate.EhCacheRegionFactory"),
-//				@PersistenceProperty(name = "hibernate.cache.use_query_cache", value = "true"),
-//				@PersistenceProperty(name = "javax.persistence.sharedCache.mode", value = "ENABLE_SELECTIVE"),
-//				}
 	)
 	public void setEntityManager(EntityManager entityManager) {
 		this.entityManager = entityManager;

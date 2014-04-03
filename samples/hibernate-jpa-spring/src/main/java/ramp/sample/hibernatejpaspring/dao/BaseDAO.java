@@ -9,6 +9,7 @@ import java.util.Map;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 /**
  * All DAO Interface-s should extend this.
@@ -96,6 +97,8 @@ public interface BaseDAO<T, ID extends Serializable> {
 	 * @return
 	 */
 	public Query createQuery(String query);
+	
+	public <X> TypedQuery<X> createQuery(String query, Class<X> clazz);
 //	/**
 //	 * Find a record based on the unique column whose type is String/Varchar
 //	 * @param columnName

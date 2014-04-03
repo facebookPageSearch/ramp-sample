@@ -19,8 +19,8 @@ import java.util.List;
 @Table(name="employees")
 @NamedQuery(name="Employee.findAll", query="SELECT e FROM Employee e")
 //@Cacheable(true)
-//@Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
-@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+@Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
+//@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class Employee extends BaseEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -36,7 +36,8 @@ public class Employee extends BaseEntity implements Serializable {
 	private String firstName;
 
 	@Column(nullable=false, length=1)
-	private String gender;
+	@Enumerated(EnumType.STRING)
+	private Gender gender;
 
 	@Temporal(TemporalType.DATE)
 	@Column(name="hire_date", nullable=false)
@@ -88,11 +89,11 @@ public class Employee extends BaseEntity implements Serializable {
 		this.firstName = firstName;
 	}
 
-	public String getGender() {
+	public Gender getGender() {
 		return this.gender;
 	}
 
-	public void setGender(String gender) {
+	public void setGender(Gender gender) {
 		this.gender = gender;
 	}
 

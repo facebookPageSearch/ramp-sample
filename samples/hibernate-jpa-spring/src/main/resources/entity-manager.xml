@@ -32,17 +32,14 @@
 		</property>
 		<property name="jpaPropertyMap">
 			<map>
-				<!-- <entry key="hibernate.cache.region.factory_class" 
-				value="net.sf.ehcache.hibernate.EhCacheRegionFactory" 
+				<entry key="hibernate.cache.region.factory_class"
+					value="${sample.ramp.hibernatejpaspring.hibernate.cache.region.factory_class}" />
+				<entry key="hibernate.cache.use_second_level_cache"
+					value="${sample.ramp.hibernatejpaspring.hibernate.cache.use_second_level_cache}" />
+				<entry key="hibernate.cache.use_query_cache"
+					value="${sample.ramp.hibernatejpaspring.hibernate.cache.use_query_cache}" />
+				<!-- <entry key="javax.persistence.sharedCache.mode" value="ENABLE_SELECTIVE" 
 					/> -->
-				<entry key="hibernate.cache.region.factory_class" 
-				value="org.hibernate.cache.ehcache.EhCacheRegionFactory" />
-				<entry key="hibernate.cache.use_second_level_cache" 
-				value="true" />
-				<entry key="hibernate.cache.use_query_cache" 
-				value="true" />
-				<!-- <entry key="javax.persistence.sharedCache.mode" 
-				value="ENABLE_SELECTIVE" /> -->
 			</map>
 		</property>
 	</bean>
