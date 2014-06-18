@@ -32,5 +32,9 @@
     <module>spring-jdbc-template</module>
     <module>spring-jersey-test</module>
     <module>hibernate-jpa-spring</module>
+    <module>orika</module>
+    <module>fasterxml</module>
+    <module>jersey-client-http-client</module>
+    <module>spring-jersey2-test</module>
   </modules>
 </project>
