@@ -16,6 +16,16 @@
 #   public *;
 #}
 
+#Included library specific rules
+#-keep class twitter4j.conf.PropertyConfigurationFactory {
+# *;
+#}
+-keep class twitter4j.**
+-keepclassmembers class twitter4j.** {
+    <init>(...);
+    <methods>;
+    <fields>;
+}
 -dontwarn twitter4j.**
 
 #ACRA specifics
@@ -61,3 +71,4 @@
 {
     public void handleSilentException(java.lang.Throwable);
 }
+
