@@ -12,6 +12,7 @@
         android:layout_marginLeft="@dimen/activity_left_margin"
         android:layout_marginRight="@dimen/activity_right_margin"
         android:maxLines="1"
+        android:singleLine="true"
         android:inputType="textEmailSubject"
         android:hint="@string/search_twitter_hint"/>
 

@@ -37,6 +37,7 @@
             android:layout_gravity="left"
             android:layout_marginLeft="@dimen/activity_left_margin"/>
     </LinearLayout>
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

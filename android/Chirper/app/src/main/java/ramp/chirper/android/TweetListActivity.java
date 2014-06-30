@@ -2,8 +2,8 @@ package ramp.chirper.android;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
@@ -21,6 +21,7 @@ public class TweetListActivity extends ActionBarActivity {
     private Context context = null;
     private Twitter twitter = null;
     private ListView listView = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

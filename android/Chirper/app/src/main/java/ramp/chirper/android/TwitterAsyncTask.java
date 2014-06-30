@@ -1,6 +1,7 @@
 package ramp.chirper.android;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 
 import java.util.ArrayList;
@@ -15,10 +16,18 @@ import twitter4j.Twitter;
 public class TwitterAsyncTask extends AsyncTask<String, Void, ArrayList<String>> {
     Twitter twitter = null;
     Activity activity = null;
+    ProgressDialog progressDialog = null;
+
 
     public TwitterAsyncTask(Twitter twitter, Activity activity) {
         this.twitter = twitter;
         this.activity = activity;
+    }
+
+    @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+        progressDialog = ProgressDialog.show(activity, "Search", "Searching Twitter");
     }
 
     @Override
@@ -32,6 +41,7 @@ public class TwitterAsyncTask extends AsyncTask<String, Void, ArrayList<String>>
             } else {
                 query = "Intuit";
             }
+            progressDialog.setMessage("Searching Twitter for query '"+query+"'");
             statuses = twitter.search(new Query(query)).getTweets();
 
             for (twitter4j.Status s : statuses) {
@@ -46,6 +56,7 @@ public class TwitterAsyncTask extends AsyncTask<String, Void, ArrayList<String>>
     @Override
     protected void onPostExecute(ArrayList<String> o) {
         super.onPostExecute(o);
+        progressDialog.dismiss();
         ((TweetListActivity)activity).setListViewAdapter(o);
     }
 }
