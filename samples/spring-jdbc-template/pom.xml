@@ -8,9 +8,7 @@
 		<artifactId>samples</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>ramp.sample</groupId>
 	<artifactId>spring-jdbc-template</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-jdbc-template</name>
 	<url>http://maven.apache.org</url>
 	<properties>
