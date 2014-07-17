@@ -36,6 +36,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:+'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'org.twitter4j:twitter4j-core:4.0.1'
+//    compile 'ch.acra:acra:4.5.0'
+    compile 'com.intuit.mobile.crashreport:acra:4.4.0-1.0.0'
 }
 
 //Generate keystore
