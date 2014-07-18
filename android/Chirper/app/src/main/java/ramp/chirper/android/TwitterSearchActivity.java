@@ -11,6 +11,8 @@ import android.widget.EditText;
 
 public class TwitterSearchActivity extends ActionBarActivity {
 
+    NullChecker nullChecker = new NullChecker();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,9 +44,7 @@ public class TwitterSearchActivity extends ActionBarActivity {
         Intent intent = new Intent(this, TweetListActivity.class);
         EditText searchEditText = (EditText) findViewById(R.id.searchQuery);
         String query = searchEditText.getText().toString();
-        if (query == null || query.trim().length() == 0) {
-            throw new IllegalArgumentException("Null or empty search query");
-        }
+        nullChecker.verify(query);
         intent.putExtra(Constants.TWITTER_SEARCH_QUERY, query);
         startActivity(intent);
     }
