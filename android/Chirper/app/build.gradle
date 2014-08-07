@@ -11,17 +11,18 @@ android {
 
         release {
             storeFile file("/Users/rpalaniappan/.android/release.keystore")
-            storePassword "android"
+            storePassword "changeit"
             keyAlias "androidrelease"
-            keyPassword "android"
+            keyPassword "changeit"
         }
     }
 
     defaultConfig {
-        minSdkVersion 8
+//        minSdkVersion 8
+        minSdkVersion 10
         targetSdkVersion 19
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.2"
     }
     buildTypes {
         release {
@@ -30,15 +31,21 @@ android {
             signingConfig signingConfigs.release
         }
     }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+    }
 }
 
 dependencies {
     compile 'com.android.support:appcompat-v7:+'
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+//    compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'org.twitter4j:twitter4j-core:4.0.1'
 //    compile 'ch.acra:acra:4.5.0'
     compile 'com.intuit.mobile.crashreport:acra:4.4.0-1.0.0'
+    compile (name:'AlmSDK', ext:'aar')
 }
+
 
 //Generate keystore
 //[rpalaniappan@BANL128a4f3d4:~/Downloads] $ keytool -keystore release.keystore -genkey -alias androidrelease

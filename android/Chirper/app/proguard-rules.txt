@@ -74,3 +74,5 @@
 
 -keepattributes SourceFile,LineNumberTable
 
+#ALM specific rules
+-keep public class com.intuit.mobile.alm.**
