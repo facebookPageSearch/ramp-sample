@@ -20,18 +20,7 @@ package="ramp.chirper.android" >
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <provider android:authorities="com.intuit.mobile.identity.dis.providers.rampchirperandroid"
-            android:name="com.intuit.mobile.identity.contentprovider.DISDataDBContentProvider"
-            android:permission="com.intuit.mobile.identity.dis.providers.ACCESS_DATA"> </provider>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
-    <uses-permission android:name="com.intuit.mobile.identity.dis.providers.ACCESS_DATA"/>
-
-
-
 </manifest>
