@@ -12,5 +12,11 @@ buildscript {
 allprojects {
     repositories {
         mavenCentral()
+        maven {
+            url 'http://sdgsdsintrepo.corp.intuit.net:8081/nexus/content/groups/int'
+        }
+        flatDir {
+            dirs 'libs'
+        }
     }
 }

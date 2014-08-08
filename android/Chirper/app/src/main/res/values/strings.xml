@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+
+    <string name="dis_app_contentprovider_extension">rampchirperandroid</string>
+    <string name="dis_max_service_timeout_seconds">5</string>
+    <string name="dis_min_keep_temp_ids_seconds">60</string>
+
     <string name="app_name">Chirper</string>
     <string name="action_settings">Settings</string>
     <string name="twitter_consumer_key">bspEDMK9iT8ACP8zBkrwAZwF7</string>
