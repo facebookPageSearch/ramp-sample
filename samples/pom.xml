@@ -36,5 +36,6 @@
     <module>fasterxml</module>
     <module>jersey-client-http-client</module>
     <module>spring-jersey2-test</module>
+    <module>gzip</module>
   </modules>
 </project>
