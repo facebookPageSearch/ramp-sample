@@ -38,10 +38,10 @@ public class UserDAOTest extends AbstractTransactionalTestNGSpringContextTests {
 	public Object[][] dpSaveHex() throws InterruptedException {
 		Object[][] ret = new Object[80][2];
 		for (int i = 0; i < 80; i++) {
-			ret[i][0] = Long.toString(System.currentTimeMillis());
 			// 0x1F601 = 128512 in decimal
-			ret[i][1] = 128512 + i;
-			Thread.sleep(2);
+			int emoji = 128512 + i;
+			ret[i][0] = Long.toString(128512 + i);
+			ret[i][1] = emoji;
 		}
 		return ret;
 	}

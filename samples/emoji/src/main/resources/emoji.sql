@@ -1,14 +1,14 @@
--- drop schema if exists emoji;
--- create schema `emoji` default character set utf8mb4 ;
+ drop schema if exists emoji;
+ create schema `emoji` default character set utf8mb4 ;
 
--- drop user 'emoji'@'localhost';
--- create user 'emoji'@'localhost' identified by 'password';
--- grant all on emoji.* to 'emoji'@'localhost';
--- 
--- drop user 'emoji'@'%';
--- create user 'emoji'@'%' identified by 'password';
--- grant all on emoji.* to 'emoji'@'%';
--- flush privileges;
+ drop user 'emoji'@'localhost';
+ create user 'emoji'@'localhost' identified by 'password';
+ grant all on emoji.* to 'emoji'@'localhost';
+ 
+ drop user 'emoji'@'%';
+ create user 'emoji'@'%' identified by 'password';
+ grant all on emoji.* to 'emoji'@'%';
+ flush privileges;
 
 
 use emoji;
