@@ -37,5 +37,6 @@
     <module>jersey-client-http-client</module>
     <module>spring-jersey2-test</module>
     <module>gzip</module>
+    <module>emoji</module>
   </modules>
 </project>
