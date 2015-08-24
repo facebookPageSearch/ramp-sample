@@ -30,8 +30,9 @@ public class HttpRequestUtil {
 		if (httpServletRequest == null) {
 			return null;
 		}
-		StringBuffer sb = httpServletRequest.getRequestURL();
-		sb.insert(0, httpServletRequest.getMethod() + ": ");
+		StringBuffer sb = new StringBuffer();
+		sb.append("method=").append(httpServletRequest.getMethod())
+				.append(" url=").append(httpServletRequest.getRequestURI());
 		String query = httpServletRequest.getQueryString();
 		if (query != null) {
 			sb.append('?').append(query);

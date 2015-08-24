@@ -44,14 +44,16 @@ public class LoggingFilter implements Filter {
 	public void doFilter(HttpServletRequest request,
 			HttpServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
+		long processingTime = -1; // Default Value assigned as -1
 		try {
 			long start = System.currentTimeMillis();
 			doFilterAddMDC(request, response, chain);
-			long processingTime = System.currentTimeMillis() - start;
-			if (log.isInfoEnabled() && request instanceof HttpServletRequest) {
-				log.info("processingTime=" + processingTime);
-			}
+			processingTime = System.currentTimeMillis() - start;
 		} finally {
+			if (log.isInfoEnabled()) {
+				String url = httpRequestUtil.getUrl(request);
+				log.info(url+"  processingTime=" + processingTime + "  status="+response.getStatus());
+			}
 			MDC.clear();
 		}
 	}

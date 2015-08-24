@@ -27,6 +27,22 @@
     <fields>;
 }
 -dontwarn twitter4j.**
+-dontwarn org.apache.**
+-dontwarn org.slf4j.**
+-dontwarn org.json.*
+-dontwarn org.mortbay.**
+-dontwarn org.apache.log4j.**
+-dontwarn org.apache.commons.logging.**
+-dontwarn org.apache.commons.logging.**
+-dontwarn org.apache.commons.codec.binary.**
+-dontwarn javax.xml.**
+-dontwarn javax.management.**
+-dontwarn java.lang.management.**
+-dontwarn android.support.**
+-dontwarn com.google.code.**
+-dontwarn oauth.signpost.**
+-dontwarn twitter4j.**
+
 
 #ACRA specifics
 # Restore some Source file names and restore approximate line numbers in the stack traces,
