@@ -27,7 +27,6 @@ public class ThreeTupleSumZero {
 				return null;
 			}
 		}
-		// FIXME:RP implement
 		List<ThreeTuple> result = null;
 		result = bruteForceMethod(intArray);
 		System.out.println(result);
