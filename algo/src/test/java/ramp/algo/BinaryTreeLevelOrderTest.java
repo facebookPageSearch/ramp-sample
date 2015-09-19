@@ -46,4 +46,10 @@ public class BinaryTreeLevelOrderTest {
 		String actual = binaryTreeLevelOrder.printTreeLevelOrder(node);
 		Assert.assertEquals(actual, expected);
 	}
+	
+	@Test(dataProvider="dataProvider")
+	public void printTreeLevelOrderBetter(Node node, String expected) {
+		String actual = binaryTreeLevelOrder.printTreeLevelOrderBetter(node);
+		Assert.assertEquals(actual, expected);
+	}
 }

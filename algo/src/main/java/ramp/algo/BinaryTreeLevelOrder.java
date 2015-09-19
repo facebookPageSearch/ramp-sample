@@ -32,6 +32,7 @@ public class BinaryTreeLevelOrder {
 	 * 3, 9
 	 * 2, 5, 7, 10
 	 * 1, 4, 8, 11
+	 * This impl is with two queues, current and next.
 	 * @return
 	 */
 	public String printTreeLevelOrder(Node node) {
@@ -70,4 +71,48 @@ public class BinaryTreeLevelOrder {
 		}
 		return sb.toString();
 	}
+	
+	/**
+	 * This is with only a single queue
+	 * @param node
+	 * @return
+	 */
+	public String printTreeLevelOrderBetter(Node node) {
+		if (node == null) {
+			throw new IllegalArgumentException("Null input node");
+		}
+		// Add a root node to a queue
+		Queue<Node> queue = new LinkedList<Node>();
+		queue.add(node);
+		StringBuilder sb = new StringBuilder();
+
+		int numNodesInCurrent = 1;
+		int numNodesInNext = 0;
+		
+		// Iterate till queue is empty
+		while (!queue.isEmpty()) {
+			Node n = queue.remove();
+			numNodesInCurrent--;
+			if (n != null) {
+				sb.append(n.data).append(',');
+				queue.add(n.left);
+				queue.add(n.right);
+				numNodesInNext += 2;
+			}
+			if (numNodesInCurrent == 0) {
+				//Reset counters
+				numNodesInCurrent = numNodesInNext;
+				numNodesInNext = 0;
+				
+				// Remove extra comma
+				if (sb != null && sb.length() > 0) {
+					sb.setLength(sb.length() - 1);
+				}
+				// Add a new line to String Buffer
+				sb.append(NEW_LINE);
+			}
+		}
+		return sb.toString();
+	}
+
 }
