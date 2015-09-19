@@ -38,33 +38,35 @@ public class BinaryTreeLevelOrder {
 		if (node == null) {
 			throw new IllegalArgumentException("Null input node");
 		}
-		//Add a root node to a queue
+		// Add a root node to a queue: current
 		Queue<Node> current = new LinkedList<Node>();
 		current.add(node);
 		StringBuilder sb = new StringBuilder();
-		
-		//Iterate till queue is empty
+
+		// Create a new queue for next level
+		Queue<Node> next = new LinkedList<Node>();
+
+		// Iterate till queue is empty
 		while (!current.isEmpty()) {
-			//Create a new queue for next level
-			Queue<Node> next = new LinkedList<Node>();
-			//Populate the 'next' queue and append String buffer
-			while (!current.isEmpty()) {
-				Node n = current.remove();
-				sb.append(n).append(',');
-				if (n != null && n.left != null) {
-					next.add(n.left);
-				}
-				if (n != null && n.right != null) {
-					next.add(n.right);
-				}
+			Node n = current.remove();
+			if (n != null) {
+				sb.append(n.data).append(',');
+				next.add(n.left);
+				next.add(n.right);
 			}
-			//Remove extra comma
-			if (sb != null  && sb.length() > 0) {
-				sb.setLength(sb.length()-1);
+			if (current.isEmpty() && !next.isEmpty()) {
+				// Swap current and next
+				Queue<Node> tmp = current;
+				current = next;
+				next = tmp;
+
+				// Remove extra comma
+				if (sb != null && sb.length() > 0) {
+					sb.setLength(sb.length() - 1);
+				}
+				// Add a new line to String Buffer
+				sb.append(NEW_LINE);
 			}
-			//Assign the next queue as current and add a new line to String buffer
-			sb.append(NEW_LINE);
-			current = next;
 		}
 		return sb.toString();
 	}
