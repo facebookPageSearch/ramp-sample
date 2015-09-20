@@ -33,6 +33,8 @@ public class BinaryTreeLevelOrder {
 	 * 2, 5, 7, 10
 	 * 1, 4, 8, 11
 	 * This impl is with two queues, current and next.
+	 * 
+	 * Ref: http://articles.leetcode.com/2010/09/printing-binary-tree-in-level-order.html
 	 * @return
 	 */
 	public String printTreeLevelOrder(Node node) {
