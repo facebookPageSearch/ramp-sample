@@ -40,6 +40,13 @@ public class HttpRequestUtil {
 		return sb.toString();
 	}
 
+	/**
+	 * Payload once read could be read again.
+	 * Do not call this method if the payload is read some where else
+	 * @param httpServletRequest
+	 * @return
+	 * @throws IOException
+	 */
 	public String payload(HttpServletRequest httpServletRequest)
 			throws IOException {
 		if (httpServletRequest == null) {
